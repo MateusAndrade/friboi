@@ -9,6 +9,10 @@ app.config(['$routeProvider','$locationProvider', function( $routeProvider, $loc
               templateUrl : 'app/views/vender.html',
               controller : 'VenderGadoController'
           })
+          .when('/detalhes-gado',{
+              templateUrl : 'app/views/detalhes-gado.html',
+              controller : 'DetalhesGadoController'
+          })
           .otherwise({
               templateUrl : 'app/views/home.html',
               redirectTo : '/',

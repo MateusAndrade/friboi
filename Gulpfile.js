@@ -23,6 +23,10 @@ gulp.task("default", function(){
     gulp.src('bower_components/jquery/dist/*.min.js')
           .pipe(gulp.dest('app/dist/libs/js/'));
 
+    // Copia os arquivos do AnimateCSS
+    gulp.src('bower_components/animate.css/animate.min.css')
+          .pipe(gulp.dest('app/dist/libs/css/'));
+
     // Copia os arquivos do AngularJS
     gulp.src('bower_components/angular/*.min.js')
           .pipe(gulp.dest('app/dist/libs/js/'));
@@ -38,7 +42,7 @@ gulp.task("default", function(){
 });
 
 gulp.task('sass', function(){
-  gulp.src('sass/**/*.scss')
+  gulp.src('sass/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('app/dist/libs/css/'));

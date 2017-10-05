@@ -36,6 +36,7 @@ build/Release
 node_modules/
 jspm_packages/
 bower_components/
+dist/libs/*
 
 # Typescript v1 declaration files
 typings/
@@ -57,4 +58,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
