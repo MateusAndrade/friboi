@@ -36,7 +36,7 @@ const forceSSL = function() {
 
 app.get("/api/consultarTodosGados", function(req,res){
 
-  mysqlConnection.query('SELECT * FROM gados LIMIT 5;', function (error, results, fields) {
+  mysqlConnection.query('SELECT * FROM gados LIMIT 4;', function (error, results, fields) {
     if (error) throw error;
     res.send(JSON.stringify(results));
   });
