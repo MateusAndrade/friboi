@@ -16,7 +16,7 @@ Em seguida, para instalar as dependências do Node:
   npm run build && npm run start
 ```
 
-Para visualizar o projeto basta acessar: url
+Para visualizar o projeto basta acessar: https://boi-cea.herokuapp.com/
 
 Como o Heroku limita os projetos gratuitos, pode ser que ao acessar o mesmo demore um pouco para carregar em um primeiro momento.
 
