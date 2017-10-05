@@ -1,32 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" ng-app="boi-linha">
 <head>
-    <title>Index</title>        
+    <title>Index</title>
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="dist/imgs/icon_1.png">
     <!-- Styles -->
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="libs/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/libs/css/bootstrap.min.css">
+    <!-- Css compilado  -->
+    <link rel="stylesheet" href="dist/libs/css/main.css">
 </head>
 <body>
-    Fon!
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-top">
+    <a class="navbar-brand" href="#!/">
+      <img src="dist/imgs/icon_1.png" width="30" height="30">
+      Boi C&A
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#linksNavBar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="linksNavBar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#!/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/comprar">Comprar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#!/vender">Vender</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <!-- Carrega as Views Dinamicamente aqui -->
+    <div ng-view></div>
+
+  </div>
+
 </body>
     <!--  Importa Libs Js -->
     <!-- AngularJS -->
-    <script src="dist/libs/js/angular..min.js"></script>
-    <!-- Jquery -->
-    <script src="dist/lib/js/jquery.min.js"></script>
+    <script src="dist/libs/js/angular.min.js"></script>
+    <!-- AngularJS Routes -->
+    <script src="dist/libs/js/angular-route.min.js"></script>
     <!-- Popper -->
-    <script src="dist/lib/js/popper.min.js"></script>
+    <script src="dist/libs/js/popper.js"></script>
+    <!-- Jquery -->
+    <script src="dist/libs/js/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="dist/lib/js/bootstrap.min.js"></script>
+    <script src="dist/libs/js/bootstrap.min.js"></script>
     <!-- Importa os Scripts usados pela aplicação -->
     <!-- Script para Incializar a Aplicação -->
     <script src="app.js"></script>
     <!-- Scripts com as configurações -->
-    <script src="app/config/config.js"></script>    
+    <script src="app/config/config.js"></script>
+    <!-- GadoService -->
+    <script src="app/services/GadoService.js"></script>
     <!-- MainController -->
     <script src="app/controller/MainController.js"></script>
+    <!-- ComprarGadoController -->
+    <script src="app/controller/ComprarGadoController.js"></script>
+    <!-- VenderGadoController -->
+    <script src="app/controller/VenderGadoController.js"></script>
 </html>
