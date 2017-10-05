@@ -6,6 +6,7 @@ app.controller("MainController", function($scope, GadoServiceAPI){
       $scope.gados = res.data;
     })
     .catch(function(err,res){
+      $scope.errorMsg = 
       console.log(err,res);
     });
 

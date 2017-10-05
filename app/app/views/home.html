@@ -27,20 +27,16 @@
   </div>
 </div>
 
-<div class="row justify-content-md-center">
+<div class="row justify-content-md-center animated fadeInRight">
   <div class="col-md-8">
 
     <ol class="breadcrumb">
       <li class="breadcrumb-item active">Cabeças de Gado em destaque:</li>
     </ol>
 
-    <div class="card card-gado text-center" ng-repeat="gado in gados">
-      <img class="card-img-top" src="{{ gado.foto }}" alt="{{ gado.descricao }}">
-      <div class="card-body">
-        <h4 class="card-title">{{ gado.descricao }}</h4>
-        <p class="card-text">{{ gado.informacoes }}</p>
-        <a href="#!/detalhes-gado/{{ gado.codigo }}" class="btn btn-primary btn-block">Detalhes</a>
-      </div>
-    </div>
+    <span ng-repeat="gado in gados" data="gado">
+      <card-gado data="gado"></card-gado>
+    </span>
+
   </div>
 </div>

@@ -10,8 +10,12 @@
     <!-- Styles -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="dist/libs/css/bootstrap.min.css">
+    <!-- AnimateCss -->
+    <link rel="stylesheet" href="dist/libs/css/animate.min.css">
     <!-- Css compilado  -->
     <link rel="stylesheet" href="dist/libs/css/main.css">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -42,10 +46,11 @@
   <div class="container-fluid">
     <!-- Carrega as Views Dinamicamente aqui -->
     <div ng-view></div>
+
   </div>
 
   <footer>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar fixed-bottom navbar-light bg-light">
       <a class="navbar-brand" href="#">Footer</a>
     </nav>
   </footer>
@@ -77,4 +82,8 @@
     <script src="app/controller/VenderGadoController.js"></script>
     <!-- DetalhesGadoController -->
     <script src="app/controller/DetalhesGadoController.js"></script>
+    <!-- CardGado -->
+    <script src="app/components/card-gado/card-gado.js"></script>
+    <!-- RatingStar -->
+    <script src="app/components/rating-star/rating-star.js"></script>
 </html>

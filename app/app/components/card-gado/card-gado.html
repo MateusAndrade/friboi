@@ -1,0 +1,23 @@
+<div class="card card-gado text-center">
+  <img class="card-img-top" src="{{ $ctrl.data.foto }}" alt="{{ $ctrl.data.descricao }}">
+  <div class="card-body">
+    <h4 class="card-title">{{ $ctrl.data.descricao }}</h4>
+    <p class="card-text">{{ $ctrl.data.informacoes }}</p>
+    <rating-star nota="$ctrl.data.avaliacao"></rating-star>
+  </div>
+  <ul class="list-group list-group-flush text-left">
+    <li class="list-group-item">
+      <span>Preço:</span> {{ $ctrl.data.preco | currency }}
+    </li>
+    <li class="list-group-item">
+      <span>Peso:</span> {{ $ctrl.data.peso }} Kg
+    </li>
+    <li class="list-group-item">
+      <span>Idade:</span> {{ $ctrl.data.idade }}
+    </li>
+  </ul>
+  <div class="card-body">
+      <a href="#!/detalhes-gado/{{ $ctrl.data.codigo }}" class="btn btn-success">Comprar</a>
+      <a href="#!/detalhes-gado/{{ $ctrl.data.codigo }}" class="btn btn-primary">Detalhes</a>
+  </div>
+</div>

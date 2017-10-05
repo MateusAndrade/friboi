@@ -9,7 +9,7 @@ app.config(['$routeProvider','$locationProvider', function( $routeProvider, $loc
               templateUrl : 'app/views/vender.html',
               controller : 'VenderGadoController'
           })
-          .when('/detalhes-gado',{
+          .when('/detalhes',{
               templateUrl : 'app/views/detalhes-gado.html',
               controller : 'DetalhesGadoController'
           })
