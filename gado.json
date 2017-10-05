@@ -1,0 +1,23 @@
+[
+  {
+    "codigo_gado":1,
+    "descricao":"Touro 1",
+    "foto": "https://i.ytimg.com/vi/6uqPBZncL5Q/maxresdefault.jpg",
+    "peso": "400Kg",
+    "idade": 2
+  },
+  {
+    "codigo_gado":3,
+    "descricao":"Touro 2",
+    "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPu4WpaHnGLAoNryiSEDye-8KTIfre26qEbj_z6MXHdK2CJgXZ",
+    "peso": "300Kg",
+    "idade": 1.5
+  },
+  {
+    "codigo_gado":3,
+    "descricao":"Touro 3",
+    "foto": "https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2013/12-understandin.jpg",
+    "peso": "200Kg",
+    "idade": 1
+  }
+]
