@@ -2,7 +2,7 @@
   <img class="card-img-top" src="{{ $ctrl.data.foto }}" alt="{{ $ctrl.data.descricao }}">
   <div class="card-body">
     <h4 class="card-title">{{ $ctrl.data.descricao }}</h4>
-    <p class="card-text">{{ $ctrl.data.informacoes }}</p>
+    <p class="card-text text-truncate">{{ $ctrl.data.informacoes }}</p>
     <rating-star nota="$ctrl.data.avaliacao"></rating-star>
   </div>
   <ul class="list-group list-group-flush text-left">

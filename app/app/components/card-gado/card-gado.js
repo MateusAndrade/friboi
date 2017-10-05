@@ -1,3 +1,6 @@
+/*
+  Componente voltado para criar Cards para cada Cabeça de Gado
+*/
 app.component("cardGado", {
   templateUrl: './app/components/card-gado/card-gado.html',
   bindings: {
