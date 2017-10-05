@@ -20,8 +20,8 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="..." alt="First slide">
+          <div ng-repeat="gado in gadosSlide" class="carousel-item active">
+            <img class="d-block w-100" src="{{ gado.foto }}" alt="{{ gado.descricao }}">
           </div>
           <div class="carousel-item">
             <img class="d-block w-100" src="..." alt="Second slide">

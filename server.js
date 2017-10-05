@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require('path');
 const app = express();
 const mysql = require('mysql');
+const cors = require('cors')
 
 //Conexao com o Servidor Bluemix
 let mysqlConnection  = mysql.createPool({
@@ -15,6 +16,9 @@ let mysqlConnection  = mysql.createPool({
 
 //Seta a pasta estatica do aplicativo para o express
 app.use(express.static(__dirname + '/app'));
+
+//Habilito o cors
+app.use(cors());
 
 const forceSSL = function() {
   return function (req, res, next) {
