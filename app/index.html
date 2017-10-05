@@ -15,7 +15,7 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-top">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light navbar-top">
     <a class="navbar-brand" href="#!/">
       <img src="dist/imgs/icon_1.png" width="30" height="30">
       Boi C&A
@@ -42,8 +42,13 @@
   <div class="container-fluid">
     <!-- Carrega as Views Dinamicamente aqui -->
     <div ng-view></div>
-
   </div>
+
+  <footer>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Footer</a>
+    </nav>
+  </footer>
 
 </body>
     <!--  Importa Libs Js -->
