@@ -29,8 +29,13 @@
 
 <div class="row justify-content-md-center">
   <div class="col-md-8">
-    <div class="card card-gado" ng-repeat="gado in gados">
-      <img class="card-img-top" src="{{ gado.foto }}" alt="Card image cap">
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active">Cabeças de Gado em destaque:</li>
+    </ol>
+
+    <div class="card card-gado text-center" ng-repeat="gado in gados">
+      <img class="card-img-top" src="{{ gado.foto }}" alt="{{ gado.descricao }}">
       <div class="card-body">
         <h4 class="card-title">{{ gado.descricao }}</h4>
         <p class="card-text">{{ gado.informacoes }}</p>
