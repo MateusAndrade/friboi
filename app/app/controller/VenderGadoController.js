@@ -11,10 +11,11 @@ app.controller("VenderGadoController", function($scope ,GadoServiceAPI ){
     //chamo o service para cadastrar gado enviando os valores da view
     GadoServiceAPI.cadastrarGado(_gadoPost)
       .then(function (res){
-        $scope.alerta(res.data.mensagem);
+        $scope.alerta = res;
+        delete $scope.gado;
       })
       .catch(function (err,res){
-        $scope.alerta(res.data.mensagem);
+        $scope.alerta = err;
       });
 
   }

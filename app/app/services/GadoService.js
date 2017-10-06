@@ -9,7 +9,7 @@ app.factory("GadoServiceAPI", function($http){
   }
 
   var _cadastrarGado = function(gado){
-    return $http.post('https://boi-cea.herokuapp.com/api/cadastrarGado', gado);
+    return $http.post('http://localhost:5000/api/cadastrarGado', gado);
   }
 
   return {

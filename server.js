@@ -57,14 +57,14 @@ app.post('/api/cadastrarGado', function (req, res) {
                        0,
                        '${req.body.preco}',
                        '${req.body.idade}',
-                       '${req.body.foto}',
+                       '${req.body.urlFoto}',
                        CURDATE())`;
 
   mysqlConnection.query(query, function (error, results, fields) {
     if (error){
-      res.send(JSON.stringify({mensagem: error}));
+      res.status(500).send(JSON.stringify({mensagem: error}));
     } else {
-      res.send(JSON.stringify({mensagem:'Cadastrado com sucesso'}));
+      res.status(200).send(JSON.stringify({mensagem:'Cadastrado com sucesso'}));
     }
   });
 

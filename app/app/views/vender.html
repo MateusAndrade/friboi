@@ -70,11 +70,25 @@
   </div>
 
   <div class="col-md-4">
-    {{ gado }}
 
-    <div ng-if="alerta" class="animated fadeInDown alert alert-success" role="alert">
-      {{ alerta.mensagem }}
+    <div class="animated fadeInDown alert alert-secondary" role="alert">
+      Cadastro de Cabeça de Gado:
     </div>
+
+    <div class="text-center">
+      <img class="align-middle" src="dist/imgs/icon_1.png">
+    </div>
+
+    <div ng-if="alerta.status === 200" class="animated fadeInDown alert alert-success" role="alert">
+      {{ alerta.data.mensagem }}
+    </div>
+
+    <div ng-if="alerta.status === 500" class="animated fadeInDown alert alert-danger" role="alert">
+      {{ alerta.data.mensagem }}
+    </div>
+
+
+    {{ alerta }}
 
   </div>
 
