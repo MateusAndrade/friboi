@@ -14,7 +14,7 @@ app.controller("VenderGadoController", function($scope ,GadoServiceAPI ){
     var _gadoPost = angular.copy(gado);
 
     //caso as informacoes adicionais estejam em branco envio ""
-    if(_gadoPost.informacoes === undefined) _gadoPost === "";
+    if(_gadoPost.informacoes === undefined) _gadoPost.informacoes == "";
 
     //chamo o service para cadastrar gado enviando os valores da view
     GadoServiceAPI.cadastrarGado(_gadoPost)
@@ -27,5 +27,4 @@ app.controller("VenderGadoController", function($scope ,GadoServiceAPI ){
       });
 
   }
-
 });

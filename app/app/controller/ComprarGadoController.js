@@ -9,4 +9,22 @@ app.controller('ComprarGadoController', function($scope, GadoServiceAPI){
 
       });
 
+  $scope.filtroSexo = function(gado){
+      if($scope.pesquisa.sexo == 'F' && gado.sexo == 'F'){
+        return true;
+      } else if($scope.pesquisa.sexo == 'F' && gado.sexo == 'M'){
+        return false;
+      }
+
+      if($scope.pesquisa.sexo == 'M' && gado.sexo == 'M'){
+        return true;
+      } else if($scope.pesquisa.sexo == 'M' && gado.sexo == 'F'){
+        return false;
+      }
+
+      if($scope.pesquisa.sexo == null) return true;
+
+  }
+
+
 });
