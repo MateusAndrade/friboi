@@ -1,5 +1,13 @@
 app.controller("VenderGadoController", function($scope ,GadoServiceAPI ){
 
+  $scope.gado = {};
+  $scope.gado.descricao = "TOURO BANDIDO";
+  $scope.gado.sexo = "M";
+  $scope.gado.idade  = 2.5;
+  $scope.gado.peso  = 200.05;
+  $scope.gado.preco  = 50000.05;
+  $scope.gado.urlFoto = "http://www.abc.net.au/news/image/6179300-3x2-340x227.jpg";
+
   $scope.cadastrarGado = function(gado){
 
     //copio o objeto do escopo da view para outro para nao atualizar

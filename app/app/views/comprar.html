@@ -1,13 +1,65 @@
 <div class="row justify-content-md-center">
   <div class="col-md-8">
     <ol class="breadcrumb">
-      <li class="breadcrumb-item active">Comprar</li>
+      <li class="breadcrumb-item active">
+        Compra de Cabeça de Gado:
+      </li>
     </ol>
   </div>
 </div>
 
 <div class="row justify-content-md-center">
   <div class="col-md-8">
-    //Conteudo
+    <div class="loader mx-auto"></div>
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+    <h4>Filtrar:</h4>
+
+    <div class="bloco-pesquisa float-left">
+      <label>Descrição:</label>
+      <input type="text" class="form-control" placeholder="Insira uma Descrição" ng-model="pesquisa.descricao">
+    </div>
+
+    <div class="bloco-pesquisa float-left">
+      <label>Sexo:</label>
+      <select class="custom-select" ng-model="pesquisa.sexo">
+        <option selected disabled value="">Filtrar por Sexo:</option>
+        <option value="F">Feminino</option>
+        <option value="M">Masculino</option>
+      </select>
+    </div>
+
+    <div class="bloco-pesquisa float-left">
+      <label>Faixa de Preço:</label>
+      <input type="range" min="0" max="100000" class="form-control" ng-model="pesquisa.faixaPreco">
+    </div>
+
+    <div class="bloco-pesquisa float-left">
+      <label>Faixa de Peso:</label>
+      <input type="range" min="0" max="5000" class="form-control" ng-model="pesquisa.faixaPeso">
+    </div>
+
+
+    <div class="clearfix"></div>
+
+    <hr class="my-4">
+  </div>
+</div>
+
+
+<div class="row justify-content-md-center">
+  <div class="col-md-8">
+
+    <span ng-repeat="gado in gados | filter:pesquisa.descricao" data="gado">
+      <card-gado data="gado">
+      </card-gado>
+    </span>
+
+    {{ pesquisa }}
+
+
   </div>
 </div>

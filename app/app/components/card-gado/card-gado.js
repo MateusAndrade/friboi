@@ -10,5 +10,9 @@ app.component("cardGado", {
     this.consultarDetalhes = function(){
       location.assign("#!/detalhes");
     }
+
+    this.comprarGado = function(){
+
+    }
   }
 });
