@@ -12,7 +12,10 @@ app.component("cardGado", {
     }
 
     this.comprarGado = function(){
-
+      console.log("Comprar Gado");
+      swal('Compra realizada', 'Cabeça de gado comprada com sucesso!', 'success');
+      delete this;
     }
+
   }
 });

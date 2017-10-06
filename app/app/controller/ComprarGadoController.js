@@ -21,10 +21,11 @@ app.controller('ComprarGadoController', function($scope, GadoServiceAPI){
       } else if($scope.pesquisa.sexo == 'M' && gado.sexo == 'F'){
         return false;
       }
-
       if($scope.pesquisa.sexo == null) return true;
-
   }
 
+  $scope.limparFiltro = function(){
+    delete $scope.pesquisa;
+  }
 
 });
