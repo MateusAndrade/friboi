@@ -47,6 +47,15 @@ app.get("/api/consultarTodosGados", function(req,res){
 
 });
 
+app.get("/api/consultarGadoDestaque", function(req,res){
+
+  mysqlConnection.query('SELECT * FROM gados LIMIT 4;', function (error, results, fields) {
+    if (error) throw error;
+    res.send(JSON.stringify(results));
+  });
+
+});
+
 app.post('/api/cadastrarGado', function (req, res) {
 
   let query = `INSERT INTO gados(descricao,informacoes, peso, sexo, avaliacao, preco  ,idade, foto, data)
