@@ -21,6 +21,9 @@ app.use(express.static(__dirname + '/app'));
 //Habilito o cors
 app.use(cors());
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 const forceSSL = function() {
   return function (req, res, next) {
     if (req.headers['x-forwarded-proto'] !== 'https') {
@@ -44,8 +47,28 @@ app.get("/api/consultarTodosGados", function(req,res){
 
 });
 
-app.post('/cadastrarGado', function (req, res) {
-  console.log(req.body);
+app.post('/api/cadastrarGado', function (req, res) {
+
+  let query = `INSERT INTO gados(descricao,informacoes, peso, sexo, avaliacao, preco  ,idade, foto, data)
+               VALUES ('${req.body.descricao}',
+                       '${req.body.informacoes}',
+                       '${req.body.peso}',
+                       '${req.body.sexo}',
+                       0,
+                       '${req.body.preco}',
+                       '${req.body.idade}',
+                       '${req.body.foto}',
+                       CURDATE())`;
+
+  mysqlConnection.query(query, function (error, results, fields) {
+    if (error){
+      res.send(JSON.stringify({mensagem: error}));
+    } else {
+      res.send(JSON.stringify({mensagem:'Cadastrado com sucesso'}));
+    }
+  });
+
+
 });
 
 //redireciona todas as rotas para a index
