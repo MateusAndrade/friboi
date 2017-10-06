@@ -1,6 +1,6 @@
 app.controller('ComprarGadoController', function($scope, GadoServiceAPI){
 
-  GadoServiceAPI.consultaTodosGados()
+  GadoServiceAPI.consultarTodosGados()
       .then(function(res){
         console.log(res);
       })

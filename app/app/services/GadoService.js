@@ -5,7 +5,7 @@ app.factory("GadoServiceAPI", function($http){
   };
 
   var _consultarGadoDestaque = function(){
-    return $http.get('https://boi-cea.herokuapp.com/api/consultarTodosGados')
+    return $http.get('https://boi-cea.herokuapp.com/api/consultarGadoDestaque')
   };
 
   var _consultaGadoEspecifico = function(params){
@@ -17,8 +17,8 @@ app.factory("GadoServiceAPI", function($http){
   }
 
   return {
-    consultarGadoDestaque: _consultarGadoDestaque
-    consultaTodosGados: _consultaTodosGados,
+    consultarGadoDestaque: _consultarGadoDestaque,
+    consultarTodosGados: _consultarTodosGados,
     consultaGadoEspecifico: _consultaGadoEspecifico,
     cadastrarGado: _cadastrarGado
   }
