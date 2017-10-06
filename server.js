@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 const mysql = require('mysql');
 const cors = require('cors')
+const bodyParser = require('body-parser');
 
 //Conexao com o Servidor Bluemix
 let mysqlConnection  = mysql.createPool({
@@ -41,6 +42,10 @@ app.get("/api/consultarTodosGados", function(req,res){
     res.send(JSON.stringify(results));
   });
 
+});
+
+app.post('/cadastrarGado', function (req, res) {
+  console.log(req.body);
 });
 
 //redireciona todas as rotas para a index

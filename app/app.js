@@ -1,1 +1,1 @@
-var app = angular.module('boi-linha',['ngRoute']);
+var app = angular.module('boi-linha',['ngRoute','ngMask']);

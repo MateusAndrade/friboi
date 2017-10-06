@@ -8,9 +8,14 @@ app.factory("GadoServiceAPI", function($http){
     return $http.get('https://boi-cea.herokuapp.com/api/consultarGadoEspecifico')
   }
 
+  var _cadastrarGado = function(gado){
+    return $http.post('https://boi-cea.herokuapp.com/api/cadastrarGado', gado);
+  }
+
   return {
     consultaTodosGados: _consultaTodosGados,
-    consultaGadoEspecifico: _consultaGadoEspecifico
+    consultaGadoEspecifico: _consultaGadoEspecifico,
+    cadastrarGado: _cadastrarGado
   }
 
 });

@@ -27,6 +27,10 @@ gulp.task("default", function(){
     gulp.src('bower_components/animate.css/animate.min.css')
           .pipe(gulp.dest('app/dist/libs/css/'));
 
+    // Copia os arquivos do AngularMask
+      gulp.src('bower_components/ngMask/dist/ngMask.min.js')
+          .pipe(gulp.dest('app/dist/libs/js/'));
+
     // Copia os arquivos do AngularJS
     gulp.src('bower_components/angular/*.min.js')
           .pipe(gulp.dest('app/dist/libs/js/'));
